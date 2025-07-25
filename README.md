@@ -6,7 +6,7 @@
 ## Развертывание проекта:
 1. Клонировать репозиторий:
    ```bash
-   git clone https://github.com/yourusername/django_dynamic_form.git
+   git clone https://github.com/ElizavetaDulub/qazx11.git
    cd django_dynamic_form
    
 2. Создать и активировать виртуальное окружение:
