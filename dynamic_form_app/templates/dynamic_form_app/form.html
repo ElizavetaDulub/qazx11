@@ -96,6 +96,9 @@
 </head>
 <body>
     <h2>Введите имена участников:</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         <div id="inputs">

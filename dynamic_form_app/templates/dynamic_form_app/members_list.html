@@ -41,6 +41,19 @@
             margin: 20px 0;
         }
 
+                button[type="button"] {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            margin: 5px 5px 5px 0;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
     </style>
 </head>
 <body>
@@ -56,5 +69,8 @@
             </div>
         </div>
     {% endfor %}
+    <a href="{% url 'form' %}">
+        <button type="button">Назад</button>
+    </a>
 </body>
 </html>

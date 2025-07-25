@@ -5,7 +5,10 @@ from .models import FormData
 
 def form_view(request: HttpRequest):
     if request.method == 'POST':
-        data = {k: v for k, v in request.POST.items() if k.startswith('name')}
+        data = {k: v.strip() for k, v in request.POST.items() if k.startswith('name') and v.strip()}
+        if not data:
+            return render(request, 'dynamic_form_app/form.html', {
+                'error': 'Введите хотя бы одно имя.'})
         FormData.objects.create(data=data)
         return redirect('members_list')
     return render(request, 'dynamic_form_app/form.html')
